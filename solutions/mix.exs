@@ -18,6 +18,8 @@ defmodule NinetyNineElixirProblems.MixProject do
   end
 
   defp deps do
-    []
+    [
+      {:credo, "~> 1.1.0", runtime: false}
+    ]
   end
 end
