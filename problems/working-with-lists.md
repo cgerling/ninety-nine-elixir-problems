@@ -31,6 +31,7 @@ Examples:
 > element_at([:a, :b, :c, :d, :e], 4)
 :e
 ```
+[solution](../solutions/lib/ninety-nine-elixir-problems/solutions/problem03.ex)
 
 ## #04 (\*) - Find the number of elements of a list
 
