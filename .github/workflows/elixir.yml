@@ -16,7 +16,7 @@ jobs:
           mix local.hex --force
           mix deps.get
           mix compile
-      - name: Save artifact
+      - name: Store project
         uses: actions/upload-artifact@v1
         with:
           name: project
@@ -28,7 +28,7 @@ jobs:
       image: elixir:1.9.1-slim
     needs: build
     steps:
-      - name: Retrieve artifact
+      - name: Retrieve project
         uses: actions/download-artifact@v1
         with:
           name: project
@@ -43,7 +43,7 @@ jobs:
       image: elixir:1.9.1-slim
     needs: build
     steps:
-      - name: Retrieve artifact
+      - name: Retrieve project
         uses: actions/download-artifact@v1
         with: 
           name: project
