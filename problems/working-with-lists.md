@@ -22,6 +22,7 @@ Examples:
 > my_but_last([1..99])
 98
 ```
+[solution](../solutions/lib/ninety-nine-elixir-problems/solutions/problem02.ex)
 
 ## #03 (\*) - Find the K'th element of a list
 
