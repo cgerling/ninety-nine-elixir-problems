@@ -51,4 +51,7 @@ jobs:
       - name: Run Formatter
         working-directory: ./solutions
         run: mix format --check-formatted
+      - name: Run Credo
+        working-directory: ./solutions
+        run: mix credo
 
