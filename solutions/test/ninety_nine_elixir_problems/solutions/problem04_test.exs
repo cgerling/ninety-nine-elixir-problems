@@ -4,11 +4,11 @@ defmodule NinetyNineElixirProblems.Solutions.Problem04Test do
 
   describe "my_length/1" do
     test "should return the length of a list" do
-      assert 4 == Problem04.my_length([1, 2, 3, 4])
+      assert Problem04.my_length([1, 2, 3, 4]) == 4
     end
 
     test "should return zero for an empty list" do
-      assert 0 == Problem04.my_length([])
+      assert Problem04.my_length([]) == 0
     end
   end
 end
