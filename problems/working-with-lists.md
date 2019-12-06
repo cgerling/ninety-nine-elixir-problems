@@ -43,6 +43,7 @@ Examples:
 > my_length([123, 456, 789])
 3
 ```
+[solution](../solutions/lib/ninety-nine-elixir-problems/solutions/problem04.ex)
 
 ## #05 (\*) - Reverse a list
 
