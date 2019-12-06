@@ -37,3 +37,18 @@ jobs:
         working-directory: ./solutions
         run: mix test
 
+  code_analysis:
+    runs-on: ubuntu-latest
+    container:
+      image: elixir:1.9.1-slim
+    needs: build
+    steps:
+      - name: Retrieve artifact
+        uses: actions/download-artifact@v1
+        with: 
+          name: project
+          path: ./solutions
+      - name: Run Formatter
+        working-directory: ./solutions
+        run: mix format --check-formatted
+
