@@ -18,9 +18,6 @@ Examples:
 ```elixir
 > my_but_last([1, 2, 3, 4])
 3
-
-> my_but_last([1..99])
-98
 ```
 [solution](../solutions/lib/ninety-nine-elixir-problems/solutions/problem02.ex)
 
