@@ -10,7 +10,7 @@ Examples:
 > my_last([:x, :y, :z])
 :z
 ```
-[solution](../solutions/lib/solutions/problem01.ex)
+[solution](../solutions/lib/ninety-nine-elixir-problems/solutions/problem01.ex)
 
 ## #02 (\*) - Find the last but one element of a list
 
