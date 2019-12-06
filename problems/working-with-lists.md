@@ -4,11 +4,14 @@
 
 Examples:
 ```elixir
-> my_last([1, 2, 3, 4])
-4
+> my_last([])
+nil
 
 > my_last([:x, :y, :z])
 :z
+
+> my_last([:x])
+:x
 ```
 [solution](../solutions/lib/ninety-nine-elixir-problems/solutions/problem01.ex)
 
@@ -16,8 +19,14 @@ Examples:
 
 Examples:
 ```elixir
-> my_but_last([1, 2, 3, 4])
-3
+> my_but_last([])
+nil
+
+> my_but_last([:x, :y, :x])
+:y
+
+> my_but_last([:x])
+nil
 ```
 [solution](../solutions/lib/ninety-nine-elixir-problems/solutions/problem02.ex)
 
@@ -25,11 +34,17 @@ Examples:
 
 Examples:
 ```elixir
-> element_at([1, 2, 3, 4], 2)
-2
+> element_at([:a, :b, :c, :d], 2)
+:c
 
-> element_at([:a, :b, :c, :d, :e], 4)
-:e
+> element_at([:a, :b, :c, :d], 5)
+nil
+
+> element_at([:a, :b, :c, :d], -1)
+nil
+
+> element_at([], 0)
+nil
 ```
 [solution](../solutions/lib/ninety-nine-elixir-problems/solutions/problem03.ex)
 
@@ -40,8 +55,8 @@ Examples:
 > my_length([1, 2, 3, 4])
 4
 
-> my_length([123, 456, 789])
-3
+> my_length([])
+0
 ```
 [solution](../solutions/lib/ninety-nine-elixir-problems/solutions/problem04.ex)
 
