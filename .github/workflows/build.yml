@@ -1,4 +1,4 @@
-name: build
+name: elixir
 
 on: push
 
