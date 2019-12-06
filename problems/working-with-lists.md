@@ -10,7 +10,7 @@ Examples:
 > my_last([:x, :y, :z])
 :z
 ```
-[solution](../solutions/lib/solutions/problem01.ex)
+[solution](../solutions/lib/ninety-nine-elixir-problems/solutions/problem01.ex)
 
 ## #02 (\*) - Find the last but one element of a list
 
@@ -18,10 +18,8 @@ Examples:
 ```elixir
 > my_but_last([1, 2, 3, 4])
 3
-
-> my_but_last([1..99])
-98
 ```
+[solution](../solutions/lib/ninety-nine-elixir-problems/solutions/problem02.ex)
 
 ## #03 (\*) - Find the K'th element of a list
 
