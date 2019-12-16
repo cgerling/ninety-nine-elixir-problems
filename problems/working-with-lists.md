@@ -70,6 +70,7 @@ Examples:
 > my_reverse([2, 1, 3, 4])
 [4, 3, 1, 2]
 ```
+[solution](../solutions/lib/ninety-nine-elixir-problems/solutions/problem05.ex)
 
 ## #06 (\*) - Find out wheter a list is palindrome
 A palindrome can be read forward or backword.
