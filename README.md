@@ -34,7 +34,7 @@ Every problem follows the template below:
 * [L-99: Ninety-Nine Lisp Problems][ninety-nine-lisp-url]
 * [P-99: Ninety-Nine Prolog][ninety-nine-prolog-url]
 
-[build-status-url]: https://github.com/cgerling/ninety-nine-elixir-problems/actions?workflow=elixir
-[build-badge]: https://github.com/cgerling/ninety-nine-elixir-problems/workflows/elixir/badge.svg
+[build-status-url]: https://github.com/cgerling/ninety-nine-elixir-problems/actions?workflow=solutions
+[build-badge]: https://github.com/cgerling/ninety-nine-elixir-problems/workflows/solutions/badge.svg
 [ninety-nine-lisp-url]: https://www.ic.unicamp.br/~meidanis/courses/mc336/2006s2/funcional/L-99_Ninety-Nine_Lisp_Problems.html
 [ninety-nine-prolog-url]: https://www.ic.unicamp.br/~meidanis/courses/mc336/2009s2/prolog/problemas
