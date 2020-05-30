@@ -13,13 +13,18 @@
 
 ## Structure
 
-Every problem follows the template below:
+Every problem follows the structure below:
 ```
-<number> (<difficulty>) - <title> 
+#<number> - <title> 
 <description>
+
+Difficulty <difficulty>
+<solution>
+
+Examples:
 <examples>
-<reference_solution>
 ```
 
-`difficulty` - Is represented by `*`, the many it have the more difficulty it is.
+Legend
+`difficulty` - Is represented by `★`, the many it have the more difficult it is.
 
