@@ -9,22 +9,73 @@ jobs:
       image: elixir:1.9.1-slim
     steps:
       - uses: actions/checkout@v1
-      - name: Fetch dependencies
-        working-directory: ./solutions
+      - name: Restore cache
+        uses: actions/cache@v2
+        with:
+          key: ${{ runner.os }}-build-${{ hashFiles(format('{0}{1}', github.workspace, '/mix.lock')) }}
+          restore-keys: ${{ runner.os }}-build-
+          path: |
+            ~/.mix
+            _build
+            deps
+      - name: Setup
         run: |
           mix local.rebar --force
           mix local.hex --force
-          mix deps.get
-      - name: Build
+      - name: Fetch dependencies
         working-directory: ./solutions
-        run: mix compile
+        run: mix deps.get
+      - name: Compile
+        working-directory: ./solutions
+        run: mix compile --warning-as-errors
+      - name: Save cache
+        uses: actions/cache@v2
+        with:
+          key: ${{ runner.os }}-build-${{ github.ref }}-${{ hashFiles(format('{0}{1}', github.workspace, '/mix.lock')) }}
+          path: |
+            ~/.mix
+            ./solutions/_build
+            ./solutions/deps
+        
+  code-style:
+    runs-on: ubuntu-latest
+    container:
+      image: elixir:1.9-slim
+    needs: build
+    steps:
+      - uses: actions/checkout@v1
+      - name: Restore cache
+        uses: actions/cache@v2
+        with:
+          key: ${{ runner.os }}-build-${{ hashFiles(format('{0}{1}', github.workspace, '/mix.lock')) }}
+          restore-keys: ${{ runner.os }}-build-
+          path: |
+            ~/.mix
+            ./solutions/_build
+            ./solutions/deps
+      - name: mix format
+        working-directory: ./solutions
+        run: mix format --check-formatted
+      - name: credo
+        working-directory: ./solutions
+        run: mix credo
+  test:
+    runs-on: ubuntu-latest
+    container:
+      image: elixir:1.9-slim
+    needs: build
+    steps:
+      - uses: actions/checkout@v1
+      - name: Restore cache
+        uses: actions/cache@v2
+        with:
+          key: ${{ runner.os }}-build-${{ hashFiles(format('{0}{1}', github.workspace, '/mix.lock')) }}
+          restore-keys: ${{ runner.os }}-build-
+          path: |
+            ~/.mix
+            ./solutions/_build
+            ./solutions/deps
       - name: Run Tests
         working-directory: ./solutions
         run: mix test
-      - name: Run Formatter
-        working-directory: ./solutions
-        run: mix format --check-formatted
-      - name: Run Credo
-        working-directory: ./solutions
-        run: mix credo
 
