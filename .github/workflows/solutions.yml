@@ -37,7 +37,7 @@ jobs:
             ./solutions/_build
             ./solutions/deps
         
-  code-style:
+  code-analysis:
     runs-on: ubuntu-latest
     container:
       image: elixir:1.9-slim
@@ -53,10 +53,10 @@ jobs:
             ~/.mix
             ./solutions/_build
             ./solutions/deps
-      - name: mix format
+      - name: Run format
         working-directory: ./solutions
         run: mix format --check-formatted
-      - name: credo
+      - name: Run credo
         working-directory: ./solutions
         run: mix credo
   test:
@@ -75,7 +75,7 @@ jobs:
             ~/.mix
             ./solutions/_build
             ./solutions/deps
-      - name: Run Tests
+      - name: Run tests
         working-directory: ./solutions
         run: mix test
 
