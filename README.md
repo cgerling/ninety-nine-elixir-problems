@@ -15,18 +15,6 @@ These are Elixir translations of [Ninety-Nine Lisp Problems][ninety-nine-lisp-ur
 * [Graphs]() (80..89)
 * [Miscellaneous Problems]() (90..99)
 
-## Structure
-
-Every problem follows the template below:
-```
-<number> (<difficulty>) - <title> 
-<description>
-<examples>
-<reference_solution>
-```
-
-`difficulty` - Is represented by `*`, the many it have the more difficulty it is.
-
 ## References
 
 * [99 Problems in OCaml](https://github.com/christiankissig/ocaml99/wiki)
