@@ -112,8 +112,8 @@ iex> Problem07.flatten([])
 iex> Problem07.flaten([:a, :b, :c])
 [:a, :b, :c]
 
-iex> Problem07.flatten([:a, [:b, [:c, :d], :e]])
-[:a, :b, :c, :d, :e]
+iex> Problem07.flatten([:a, [:b, [:c, [:d, :e], :f], [:g, :h]]])
+[:a, :b, :c, :d, :e, :f, :g]
 ```
 
 ## #08 - Eliminate consecutive duplicates of list elements
