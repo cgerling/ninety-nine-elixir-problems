@@ -16,15 +16,15 @@
 Every problem follows the structure below:
 ```
 #<number> - <title> 
-<description>
+<difficulty> (<solution>)
 
-Difficulty <difficulty>
-<solution>
+<description>
 
 Examples:
 <examples>
 ```
 
-Legend
+Legend:
+
 `difficulty` - Is represented by `★`, the many it have the more difficult it is.
 
