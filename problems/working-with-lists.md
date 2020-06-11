@@ -1,4 +1,4 @@
-# E-99 - Working with lists
+# Working with lists
 
 ## #01 - Find the last element of a list
 
