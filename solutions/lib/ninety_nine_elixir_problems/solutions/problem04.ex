@@ -1,7 +1,17 @@
 defmodule NinetyNineElixirProblems.Solutions.Problem04 do
-  def my_length([]), do: 0
+  @doc ~S"""
+  Find the number of elements of a list
 
-  def my_length(list), do: count(list)
+  ## Examples:
+
+    iex> Problem04.size([1, 2, 3, 4])
+    4
+
+    iex> Problem04.size([])
+    0
+  """
+  def size([]), do: 0
+  def size(list), do: count(list)
 
   defp count(list, count \\ 0)
   defp count([], count), do: count
