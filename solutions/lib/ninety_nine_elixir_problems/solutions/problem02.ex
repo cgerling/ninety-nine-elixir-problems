@@ -1,7 +1,20 @@
 defmodule NinetyNineElixirProblems.Solutions.Problem02 do
-  def my_but_last([]), do: nil
+  @doc ~S"""
+  Finds the last but one element of a list
 
-  def my_but_last([head | [_]]), do: head
+  ## Examples:
+    
+    iex> Problem02.but_last([])
+    nil
 
-  def my_but_last([_ | tail]), do: my_but_last(tail)
+    iex> Problem02.but_last([:x, :y, :z])
+    :y
+
+    iex> Problem02.but_last([:x])
+    nil
+
+  """
+  def but_last([]), do: nil
+  def but_last([head | [_]]), do: head
+  def but_last([_ | tail]), do: but_last(tail)
 end

@@ -1,7 +1,20 @@
 defmodule NinetyNineElixirProblems.Solutions.Problem01 do
-  def my_last([]), do: nil
+  @doc ~S"""
+  Finds the last element of a list
 
-  def my_last([head]), do: head
+  ## Examples
 
-  def my_last([_ | tail]), do: my_last(tail)
+    iex> Problem01.last([])
+    nil
+
+    iex> Problem01.last([:x, :y, :z])
+    :z
+
+    iex> Problem01.last([:x])
+    :x
+
+  """
+  def last([]), do: nil
+  def last([head]), do: head
+  def last([_ | tail]), do: last(tail)
 end
