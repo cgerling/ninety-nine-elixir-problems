@@ -11,13 +11,13 @@ These are Elixir translations of [Ninety-Nine Lisp Problems][ninety-nine-lisp-ur
 
 ## Problems
 
-* [Working with lists](problems/working-with-lists.md) (1..28)
-* [Arithmetic]() (31..41)
-* [Logic and Codes]() (46..50)
-* [Binary Trees]() (54A..69)
-* [Multiway Trees]() (70B..73)
-* [Graphs]() (80..89)
-* [Miscellaneous Problems]() (90..99)
+* [Working with lists](problems/working-with-lists.md)
+* Arithmetic
+* Logic and Codes
+* Binary Trees
+* Multiway Trees
+* Graphs
+* Miscellaneous Problems
 
 ## References
 
