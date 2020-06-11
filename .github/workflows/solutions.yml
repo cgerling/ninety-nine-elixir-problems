@@ -9,15 +9,15 @@ jobs:
       image: elixir:1.9.1-slim
     steps:
       - uses: actions/checkout@v1
-      - name: Restore cache
+      - name: Setup cache
         uses: actions/cache@v2
         with:
           key: ${{ runner.os }}-build-${{ hashFiles(format('{0}{1}', github.workspace, '/mix.lock')) }}
           restore-keys: ${{ runner.os }}-build-
           path: |
             ~/.mix
-            _build
-            deps
+            ./solutions/_build
+            ./solutions/deps
       - name: Setup
         run: |
           mix local.rebar --force
@@ -28,14 +28,6 @@ jobs:
       - name: Compile
         working-directory: ./solutions
         run: mix compile --warning-as-errors
-      - name: Save cache
-        uses: actions/cache@v2
-        with:
-          key: ${{ runner.os }}-build-${{ github.ref }}-${{ hashFiles(format('{0}{1}', github.workspace, '/mix.lock')) }}
-          path: |
-            ~/.mix
-            ./solutions/_build
-            ./solutions/deps
         
   code-analysis:
     runs-on: ubuntu-latest
