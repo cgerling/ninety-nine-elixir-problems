@@ -6,13 +6,13 @@
 
 Examples:
 ```elixir
-> my_last([])
+iex> Problem01.last([])
 nil
 
-> my_last([:x, :y, :z])
+iex> Problem01.last([:x, :y, :z])
 :z
 
-> my_last([:x])
+iex> Problem01.last([:x])
 :x
 ```
 
@@ -22,13 +22,13 @@ nil
 
 Examples:
 ```elixir
-> my_but_last([])
+iex> Problem02.but_last([])
 nil
 
-> my_but_last([:x, :y, :x])
+iex> Problem02.but_last([:x, :y, :x])
 :y
 
-> my_but_last([:x])
+iex> Problem02.but_last([:x])
 nil
 ```
 
@@ -38,16 +38,16 @@ nil
 
 Examples:
 ```elixir
-> element_at([:a, :b, :c, :d], 2)
+iex> Problem03.element_at([:a, :b, :c, :d], 2)
 :c
 
-> element_at([:a, :b, :c, :d], 5)
+iex> Problem03.element_at([:a, :b, :c, :d], 5)
 nil
 
-> element_at([:a, :b, :c, :d], -1)
+iex> Problem03.element_at([:a, :b, :c, :d], -1)
 nil
 
-> element_at([], 0)
+iex> Problem03.element_at([], 0)
 nil
 ```
 
@@ -57,10 +57,10 @@ nil
 
 Examples:
 ```elixir
-> my_length([1, 2, 3, 4])
+iex> Problem04.size([1, 2, 3, 4])
 4
 
-> my_length([])
+iex> Problem04.size([])
 0
 ```
 
@@ -70,10 +70,10 @@ Examples:
 
 Examples:
 ```elixir
-> my_reverse([])
+iex> Problem05.reverse([])
 []
 
-> my_reverse([2, 1, 3, 4])
+iex> Problem05.reverse([2, 1, 3, 4])
 [4, 3, 1, 2]
 ```
 
@@ -85,15 +85,16 @@ A palindrome can be read forward or backword.
 
 Examples:
 ```elixir
-> is_palindrome([1, 2, 3])
-false
-
-> is_palindrome([1, 2, 4, 8, 16, 8, 4, 2, 1])
+iex> Problem06.is_palindrome?([1, 2, 4, 8, 16, 8, 4, 2, 1])
 true
 
-> is_palindrome("ninetynine")
+iex> Problem06.is_palindrome?("detartrated")
+true
 
-> is_palindrome("madamimadam")
+iex> Problem06.is_palindrome?([1, 2, 3])
+false
+
+iex> Problem06.is_palindrome?("ninetynine")
 true
 ```
 
@@ -105,13 +106,13 @@ Transform a list, possibly holding lists as elements into a `flat` list by repla
 
 Examples:
 ```elixir
-> my_flatten([])
+iex> Problem07.flatten([])
 []
 
-> my_flaten([:a, :b, :c])
+iex> Problem07.flaten([:a, :b, :c])
 [1, 2, 3]
 
-> my_flatten([:a, [:b, [:c, :d], :e]])
+iex> Problem07.flatten([:a, [:b, [:c, :d], :e]])
 [:a, :b, :c, :d, :e]
 ```
 
@@ -123,7 +124,7 @@ If a list contains repeated elements they should be replaced with a single copy 
 
 Examples:
 ```elixir
-> compress([:a, :a, :a, :a, :b, :c, :c, :a, :a, :d, :e, :e, :e, :e])
+iex> Problem08.compress([:a, :a, :a, :a, :b, :c, :c, :a, :a, :d, :e, :e, :e, :e])
 [:a, :b, :c, :a, :d, :e]
 ```
 
@@ -135,7 +136,7 @@ If a list contains repeated elements they should be placed in separate sublists.
 
 Examples:
 ```elixir
-> pack([:a, :a, :a, :a, :b, :c, :c, :a, :a, :d, :e, :e, :e, :e])
+iex> Problem09.pack([:a, :a, :a, :a, :b, :c, :c, :a, :a, :d, :e, :e, :e, :e])
 [[:a, :a, :a, :a], [:b], [:c, :c], [:a, :a], [:d], [:e, :e, :e, :e]]
 ```
 
@@ -147,7 +148,7 @@ Use the result of problem [#09](#09---pack-consecutive-duplicates-of-list-elemen
 
 Examples:
 ```elixir
-> encode([:a, :a, :a, :a, :b, :c, :c, :a, :a, :d, :e, :e, :e, :e])
+iex> Problem10.encode([:a, :a, :a, :a, :b, :c, :c, :a, :a, :d, :e, :e, :e, :e])
 [{4, :a}, {1, :b}, {2, :c}, {2, :a}, {1, :d}, {4, :e}]
 ```
 
