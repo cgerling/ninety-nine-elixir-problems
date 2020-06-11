@@ -26,5 +26,5 @@ Examples:
 
 Legend:
 
-`difficulty` - Is represented by `★`, the many it have the more difficult it is.
+`difficulty` - The many `★` it have the more difficult it is.
 
