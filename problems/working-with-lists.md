@@ -100,7 +100,7 @@ true
 
 ## #07 - Flatten a nested list structure
 
-★★
+★★ [(solution)](../solutions/lib/ninety-nine-elixir-problems/solutions/problem07.ex)
 
 Transform a list, possibly holding lists as elements into a `flat` list by replacing each list with its elements (recursively).
 
