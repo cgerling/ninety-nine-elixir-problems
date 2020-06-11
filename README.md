@@ -7,7 +7,7 @@
 
 The purpose of this problem collection is to allow you to practice your skills in logic programming. Your goal should be to find the most elegant solution for the given problems. Efficiency is important, but logical clarity is even more crucial. Some of the (easy) problems can be trivially solved using built-in predicates. However, in these cases, you learn more if you try to find your solution.
 
-These are Elixir translations of [Ninety-Nine Lisp Problems][ninety-nine-lisp-url], which are themselves a translation of [Ninety-Nine Prolog Problems][ninety-nine-prolog-url]. 
+These are Elixir translations of [Ninety-Nine Lisp Problems][ninety-nine-lisp-url], which are themselves a translation of [Ninety-Nine Prolog Problems][ninety-nine-prolog-url]. Although all collections have 99 in their names there's actually only 88 problems.
 
 ## Problems
 
