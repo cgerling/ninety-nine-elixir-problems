@@ -100,7 +100,7 @@ true
 
 ## #07 - Flatten a nested list structure
 
-★★
+★★ [(solution)](../solutions/lib/ninety-nine-elixir-problems/solutions/problem07.ex)
 
 Transform a list, possibly holding lists as elements into a `flat` list by replacing each list with its elements (recursively).
 
@@ -110,10 +110,10 @@ iex> Problem07.flatten([])
 []
 
 iex> Problem07.flaten([:a, :b, :c])
-[1, 2, 3]
+[:a, :b, :c]
 
-iex> Problem07.flatten([:a, [:b, [:c, :d], :e]])
-[:a, :b, :c, :d, :e]
+iex> Problem07.flatten([:a, [:b, [:c, [:d, :e], :f], [:g, :h]]])
+[:a, :b, :c, :d, :e, :f, :g]
 ```
 
 ## #08 - Eliminate consecutive duplicates of list elements
